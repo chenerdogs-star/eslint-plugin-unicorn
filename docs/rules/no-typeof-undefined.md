@@ -30,8 +30,11 @@ function foo(bar) {
 ```js
 import foo from './foo.js';
 
-if (typeof foo.bar !== 'undefined') {} // ❌
-if (foo.bar !== undefined) {}          // ✅
+// ❌
+if (typeof foo.bar !== 'undefined') {}
+
+// ✅
+if (foo.bar !== undefined) {}
 ```
 
 ## Options
@@ -51,6 +54,12 @@ Set it to `true` to check all variables.
 // ❌
 if (typeof undefinedVariable === 'undefined') {}
 
+// ✅
+if (undefinedVariable === undefined) {}
+
 // ❌
 if (typeof Array === 'undefined') {}
+
+// ✅
+if (Array === undefined) {}
 ```

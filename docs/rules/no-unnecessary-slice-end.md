@@ -14,16 +14,25 @@ When calling `{String,Array,TypedArray}#slice(start, end)`, omitting the `end` a
 ## Examples
 
 ```js
-const foo = string.slice(1, string.length); // ❌
-const foo = string.slice(1);                // ✅
+// ❌
+const foo = string.slice(1, string.length);
+
+// ✅
+const foo = string.slice(1);
 ```
 
 ```js
-const foo = string.slice(1, Infinity); // ❌
-const foo = string.slice(1);           // ✅
+// ❌
+const foo = string.slice(1, Infinity);
+
+// ✅
+const foo = string.slice(1);
 ```
 
 ```js
-const foo = string.slice(1, Number.POSITIVE_INFINITY); // ❌
-const foo = string.slice(1);                           // ✅
+// ❌
+const foo = string.slice(1, Number.POSITIVE_INFINITY);
+
+// ✅
+const foo = string.slice(1);
 ```

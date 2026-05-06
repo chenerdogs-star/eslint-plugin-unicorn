@@ -34,49 +34,73 @@ const foo = 0xFF;
 ```
 
 ```js
-const foo = 0Xffn; // ❌
-const foo = 0xFFn; // ✅
+// ❌
+const foo = 0Xffn;
+
+// ✅
+const foo = 0xFFn;
 ```
 
 [Binary](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Binary)
 
 ```js
-const foo = 0B10; // ❌
-const foo = 0b10; // ✅
+// ❌
+const foo = 0B10;
+
+// ✅
+const foo = 0b10;
 ```
 
 ```js
-const foo = 0B10n; // ❌
-const foo = 0b10n; // ✅
+// ❌
+const foo = 0B10n;
+
+// ✅
+const foo = 0b10n;
 ```
 
 [Octal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
 
 ```js
-const foo = 0O76; // ❌
-const foo = 0o76; // ✅
+// ❌
+const foo = 0O76;
+
+// ✅
+const foo = 0o76;
 ```
 
 ```js
-const foo = 0O76n; // ❌
-const foo = 0o76n; // ✅
+// ❌
+const foo = 0O76n;
+
+// ✅
+const foo = 0o76n;
 ```
 
 [Exponential notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Exponential)
 
 ```js
-const foo = 2E-5; // ❌
-const foo = 2e-5; // ✅
+// ❌
+const foo = 2E-5;
+
+// ✅
+const foo = 2e-5;
 ```
 
 ```js
-const foo = 2E+5; // ❌
-const foo = 2e+5; // ✅
+// ❌
+const foo = 2E+5;
+
+// ✅
+const foo = 2e+5;
 ```
 
 ```js
-const foo = 2E5; // ❌
-const foo = 2e5; // ✅
+// ❌
+const foo = 2E5;
+
+// ✅
+const foo = 2e5;
 ```
 
 ## Options

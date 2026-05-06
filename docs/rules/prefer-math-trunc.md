@@ -49,8 +49,11 @@ console.log(Math.trunc(foo));
 ```js
 let foo = 37.4;
 
-foo |= 0;              // ❌
-foo = Math.trunc(foo); // ✅
+// ❌
+foo |= 0;
+
+// ✅
+foo = Math.trunc(foo);
 ```
 
 ```js

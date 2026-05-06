@@ -14,11 +14,17 @@ The [`await` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/R
 ## Examples
 
 ```js
-await await promise; // ❌
-await promise;       // ✅
+// ❌
+await await promise;
+
+// ✅
+await promise;
 ```
 
 ```js
-await [promise1, promise2];                     // ❌
-await Promise.allSettled([promise1, promise2]); // ✅
+// ❌
+await [promise1, promise2];
+
+// ✅
+await Promise.allSettled([promise1, promise2]);
 ```

@@ -51,8 +51,11 @@ console.log(message);
 ```
 
 ```js
-console.log(message); // eslint-disable-line            // ❌
-console.log(message); // eslint-disable-line no-console // ✅
+// ❌
+console.log(message); // eslint-disable-line
+
+// ✅
+console.log(message); // eslint-disable-line no-console
 ```
 
 ```js

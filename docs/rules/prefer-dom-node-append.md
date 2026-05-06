@@ -14,6 +14,9 @@ Enforces the use of, for example, `document.body.append(div);` over `document.bo
 ## Examples
 
 ```js
-foo.appendChild(bar); // ❌
-foo.append(bar);      // ✅
+// ❌
+foo.appendChild(bar);
+
+// ✅
+foo.append(bar);
 ```

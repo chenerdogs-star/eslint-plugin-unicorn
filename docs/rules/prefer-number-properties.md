@@ -22,28 +22,43 @@ ECMAScript 2015 moved globals onto the `Number` constructor for consistency and 
 ## Examples
 
 ```js
-const foo = parseInt('10', 2);        // ❌
-const foo = Number.parseInt('10', 2); // ✅
+// ❌
+const foo = parseInt('10', 2);
+
+// ✅
+const foo = Number.parseInt('10', 2);
 ```
 
 ```js
-const foo = parseFloat('10.5');        // ❌
-const foo = Number.parseFloat('10.5'); // ✅
+// ❌
+const foo = parseFloat('10.5');
+
+// ✅
+const foo = Number.parseFloat('10.5');
 ```
 
 ```js
-const foo = isNaN(10);        // ❌
-const foo = Number.isNaN(10); // ✅
+// ❌
+const foo = isNaN(10);
+
+// ✅
+const foo = Number.isNaN(10);
 ```
 
 ```js
-const foo = isFinite(10);        // ❌
-const foo = Number.isFinite(10); // ✅
+// ❌
+const foo = isFinite(10);
+
+// ✅
+const foo = Number.isFinite(10);
 ```
 
 ```js
-if (Object.is(foo, NaN)) {}        // ❌
-if (Object.is(foo, Number.NaN)) {} // ✅
+// ❌
+if (Object.is(foo, NaN)) {}
+
+// ✅
+if (Object.is(foo, Number.NaN)) {}
 ```
 
 ```js
@@ -91,13 +106,19 @@ Pass `checkInfinity: true` to enable check on `Infinity`.
 ```js
 /* eslint unicorn/prefer-number-properties: ["error", {"checkInfinity": true}] */
 
-const foo = Infinity;                 // ❌
-const foo = Number.POSITIVE_INFINITY; // ✅
+// ❌
+const foo = Infinity;
+
+// ✅
+const foo = Number.POSITIVE_INFINITY;
 ```
 
 ```js
-const foo = -Infinity;                // ❌
-const foo = Number.NEGATIVE_INFINITY; // ✅
+// ❌
+const foo = -Infinity;
+
+// ✅
+const foo = Number.NEGATIVE_INFINITY;
 ```
 
 ### checkNaN

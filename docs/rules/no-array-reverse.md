@@ -16,8 +16,11 @@ Prefer using [`Array#toReversed()`](https://developer.mozilla.org/en-US/docs/Web
 ## Examples
 
 ```js
-const reversed = [...array].reverse();    // ❌
-const reversed = [...array].toReversed(); // ✅
+// ❌
+const reversed = [...array].reverse();
+
+// ✅
+const reversed = [...array].toReversed();
 ```
 
 ## Options
@@ -36,6 +39,9 @@ Pass `allowExpressionStatement: false` to forbid `Array#reverse()` even if it's 
 /* eslint unicorn/no-array-reverse: ["error", {"allowExpressionStatement": false}] */
 // ❌
 array.reverse();
+
+// ✅
+array = array.toReversed();
 ```
 
 ## Related rules

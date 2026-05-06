@@ -19,21 +19,33 @@ We only check `.length === 0`, `.length !== 0`, and `.length > 0`. These zero an
 ```js
 // ❌
 if (array.length === 0 || array.every(Boolean));
+
+// ✅
+if (array.every(Boolean));
 ```
 
 ```js
-if (array.length !== 0 && array.some(Boolean)); // ❌
-if (array.every(Boolean));                      // ✅
+// ❌
+if (array.length !== 0 && array.some(Boolean));
+
+// ✅
+if (array.every(Boolean));
 ```
 
 ```js
-if (array.length > 0 && array.some(Boolean)); // ❌
-if (array.some(Boolean));                     // ✅
+// ❌
+if (array.length > 0 && array.some(Boolean));
+
+// ✅
+if (array.some(Boolean));
 ```
 
 ```js
-const isAllTrulyOrEmpty = array.length === 0 || array.every(Boolean); // ❌
-const isAllTrulyOrEmpty = array.every(Boolean);                       // ✅
+// ❌
+const isAllTrulyOrEmpty = array.length === 0 || array.every(Boolean);
+
+// ✅
+const isAllTrulyOrEmpty = array.every(Boolean);
 ```
 
 ```js

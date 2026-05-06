@@ -57,8 +57,11 @@ import unicorn from 'unicorn';
 ## Examples
 
 ```js
-const foo = array.map(callback);                     // ❌
-const foo = array.map(element => callback(element)); // ✅
+// ❌
+const foo = array.map(callback);
+
+// ✅
+const foo = array.map(element => callback(element));
 ```
 
 ```js
@@ -77,13 +80,19 @@ array.forEach(element => {
 ```
 
 ```js
-const foo = array.every(callback);                     // ❌
-const foo = array.every(element => callback(element)); // ✅
+// ❌
+const foo = array.every(callback);
+
+// ✅
+const foo = array.every(element => callback(element));
 ```
 
 ```js
-const foo = array.filter(callback);                     // ❌
-const foo = array.filter(element => callback(element)); // ✅
+// ❌
+const foo = array.filter(callback);
+
+// ✅
+const foo = array.filter(element => callback(element));
 ```
 
 ```js
@@ -92,18 +101,27 @@ const foo = array.filter(Boolean);
 ```
 
 ```js
-const foo = array.find(callback);                     // ❌
-const foo = array.find(element => callback(element)); // ✅
+// ❌
+const foo = array.find(callback);
+
+// ✅
+const foo = array.find(element => callback(element));
 ```
 
 ```js
-const index = array.findIndex(callback);                     // ❌
-const index = array.findIndex(element => callback(element)); // ✅
+// ❌
+const index = array.findIndex(callback);
+
+// ✅
+const index = array.findIndex(element => callback(element));
 ```
 
 ```js
-const foo = array.some(callback);                     // ❌
-const foo = array.some(element => callback(element)); // ✅
+// ❌
+const foo = array.some(callback);
+
+// ✅
+const foo = array.some(element => callback(element));
 ```
 
 ```js
@@ -132,8 +150,11 @@ const foo = array.reduceRight(
 ```
 
 ```js
-const foo = array.flatMap(callback);                     // ❌
-const foo = array.flatMap(element => callback(element)); // ✅
+// ❌
+const foo = array.flatMap(callback);
+
+// ✅
+const foo = array.flatMap(element => callback(element));
 ```
 
 ```js

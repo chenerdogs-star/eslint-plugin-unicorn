@@ -18,18 +18,27 @@ Using `undefined` as arrow function body sometimes make the purpose more explici
 ## Examples
 
 ```js
-let foo = undefined; // ❌
-let foo;             // ✅
+// ❌
+let foo = undefined;
+
+// ✅
+let foo;
 ```
 
 ```js
-const {foo = undefined} = bar; // ❌
-const {foo} = bar;             // ✅
+// ❌
+const {foo = undefined} = bar;
+
+// ✅
+const {foo} = bar;
 ```
 
 ```js
-const noop = () => undefined; // ❌
-const noop = () => {};        // ✅
+// ❌
+const noop = () => undefined;
+
+// ✅
+const noop = () => {};
 ```
 
 ```js
@@ -77,8 +86,11 @@ function foo({bar}) {
 ```
 
 ```js
-foo(undefined); // ❌
-foo();          // ✅
+// ❌
+foo(undefined);
+
+// ✅
+foo();
 ```
 
 ## Options
@@ -96,6 +108,9 @@ Disallow the use of `undefined` at the end of function call arguments. Pass `che
 // ❌
 /* eslint unicorn/no-useless-undefined: ["error", {"checkArguments": true}] */
 foo(bar, baz, undefined);
+
+// ✅
+foo(bar, baz);
 ```
 
 ```js
@@ -115,6 +130,9 @@ Disallow the use of `undefined` as arrow function body. Pass `checkArrowFunction
 /* eslint unicorn/no-useless-undefined: ["error", {"checkArrowFunctionBody": true}] */
 // ❌
 const foo = () => undefined;
+
+// ✅
+const foo = () => {};
 ```
 
 ```js

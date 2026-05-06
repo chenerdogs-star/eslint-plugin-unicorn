@@ -14,11 +14,17 @@ Enforces a convention of using [Unicode escapes](https://mathiasbynens.be/notes/
 ## Examples
 
 ```js
-const foo = '\x1B';   // ❌
-const foo = '\u001B'; // ✅
+// ❌
+const foo = '\x1B';
+
+// ✅
+const foo = '\u001B';
 ```
 
 ```js
-const foo = `\x1B${bar}`;   // ❌
-const foo = `\u001B${bar}`; // ✅
+// ❌
+const foo = `\x1B${bar}`;
+
+// ✅
+const foo = `\u001B${bar}`;
 ```

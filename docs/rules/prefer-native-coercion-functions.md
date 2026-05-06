@@ -14,8 +14,11 @@ If a function is equivalent to [`String`](https://developer.mozilla.org/en-US/do
 ## Examples
 
 ```js
-const toBoolean = value => Boolean(value); // ❌
-const toBoolean = Boolean;                 // ✅
+// ❌
+const toBoolean = value => Boolean(value);
+
+// ✅
+const toBoolean = Boolean;
 ```
 
 ```js
@@ -31,8 +34,11 @@ if (Number(foo) === 1) {}
 ```
 
 ```js
-const hasTruthyValue = array.some(element => element); // ❌
-const hasTruthyValue = array.some(Boolean);            // ✅
+// ❌
+const hasTruthyValue = array.some(element => element);
+
+// ✅
+const hasTruthyValue = array.some(Boolean);
 ```
 
 ```js

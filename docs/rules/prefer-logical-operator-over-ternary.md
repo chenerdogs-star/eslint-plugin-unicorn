@@ -27,18 +27,27 @@ foo || bar;
 ```
 
 ```js
-foo.bar ? foo.bar : foo.baz // ❌
-foo.bar ?? foo.baz          // ✅
+// ❌
+foo.bar ? foo.bar : foo.baz
+
+// ✅
+foo.bar ?? foo.baz
 ```
 
 ```js
-foo?.bar ? foo.bar : baz // ❌
-foo?.bar ?? baz          // ✅
+// ❌
+foo?.bar ? foo.bar : baz
+
+// ✅
+foo?.bar ?? baz
 ```
 
 ```js
-!bar ? foo : bar; // ❌
-bar ?? foo;       // ✅
+// ❌
+!bar ? foo : bar;
+
+// ✅
+bar ?? foo;
 ```
 
 ```js

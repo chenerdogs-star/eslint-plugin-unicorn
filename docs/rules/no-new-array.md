@@ -28,16 +28,17 @@ const array = Array.from({length});
 ```
 
 ```js
-const array = new Array(onlyElement); // ❌
-const array = [onlyElement];          // ✅
+// ❌
+const array = new Array(onlyElement);
+
+// ✅
+const array = [onlyElement];
 ```
 
 ```js
 // ❌
 const array = new Array(...unknownArgumentsList);
-```
 
-```js
 // ✅
-const array = [...items];
+const array = [...unknownArgumentsList];
 ```

@@ -14,28 +14,43 @@ When getting builtin modules, it's better to use the [`node:` protocol](https://
 ## Examples
 
 ```js
-import dgram from 'dgram';      // ❌
-import dgram from 'node:dgram'; // ✅
+// ❌
+import dgram from 'dgram';
+
+// ✅
+import dgram from 'node:dgram';
 ```
 
 ```js
-export {strict as default} from 'assert';      // ❌
-export {strict as default} from 'node:assert'; // ✅
+// ❌
+export {strict as default} from 'assert';
+
+// ✅
+export {strict as default} from 'node:assert';
 ```
 
 ```js
-import fs from 'fs/promises';      // ❌
-import fs from 'node:fs/promises'; // ✅
+// ❌
+import fs from 'fs/promises';
+
+// ✅
+import fs from 'node:fs/promises';
 ```
 
 ```js
-const fs = require('fs/promises');      // ❌
-const fs = require('node:fs/promises'); // ✅
+// ❌
+const fs = require('fs/promises');
+
+// ✅
+const fs = require('node:fs/promises');
 ```
 
 ```js
-const fs = process.getBuiltinModule('fs/promises');      // ❌
-const fs = process.getBuiltinModule('node:fs/promises'); // ✅
+// ❌
+const fs = process.getBuiltinModule('fs/promises');
+
+// ✅
+const fs = process.getBuiltinModule('node:fs/promises');
 ```
 
 ```ts

@@ -73,6 +73,11 @@ Prefer using the [JavaScript module](https://developer.mozilla.org/en-US/docs/We
 'use strict';
 
 // …
+
+// ✅
+// (Remove the 'use strict' directive — JavaScript modules are in strict mode by default)
+
+// …
 ```
 
 ```js
@@ -82,9 +87,7 @@ if (foo) {
 }
 
 // …
-```
 
-```js
 // ✅
 function run() {
 	if (foo) {
@@ -109,23 +112,35 @@ const file = path.join(path.dirname(url.fileURLToPath(import.meta.url)), 'foo.js
 ```
 
 ```js
-const content = fs.readFileSync(__filename, 'utf8');           // ❌
-const content = fs.readFileSync(import.meta.filename, 'utf8'); // ✅
+// ❌
+const content = fs.readFileSync(__filename, 'utf8');
+
+// ✅
+const content = fs.readFileSync(import.meta.filename, 'utf8');
 ```
 
 ```js
-const {fromPairs} = require('lodash'); // ❌
-import {fromPairs} from 'lodash-es';   // ✅
+// ❌
+const {fromPairs} = require('lodash');
+
+// ✅
+import {fromPairs} from 'lodash-es';
 ```
 
 ```js
-module.exports = foo; // ❌
-export default foo;   // ✅
+// ❌
+module.exports = foo;
+
+// ✅
+export default foo;
 ```
 
 ```js
-exports.foo = foo; // ❌
-export {foo};      // ✅
+// ❌
+exports.foo = foo;
+
+// ✅
+export {foo};
 ```
 
 ## Resources

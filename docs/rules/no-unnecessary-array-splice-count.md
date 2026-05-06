@@ -16,31 +16,49 @@ When calling [`Array#splice(start, deleteCount)`](https://developer.mozilla.org/
 ## Examples
 
 ```js
-const foo = array.toSpliced(1, string.length); // ❌
-const foo = array.toSpliced(1);                // ✅
+// ❌
+const foo = array.toSpliced(1, string.length);
+
+// ✅
+const foo = array.toSpliced(1);
 ```
 
 ```js
-const foo = array.toSpliced(1, Infinity); // ❌
-const foo = array.toSpliced(1);           // ✅
+// ❌
+const foo = array.toSpliced(1, Infinity);
+
+// ✅
+const foo = array.toSpliced(1);
 ```
 
 ```js
-const foo = array.toSpliced(1, Number.POSITIVE_INFINITY); // ❌
-const foo = array.toSpliced(1);                           // ✅
+// ❌
+const foo = array.toSpliced(1, Number.POSITIVE_INFINITY);
+
+// ✅
+const foo = array.toSpliced(1);
 ```
 
 ```js
-array.splice(1, string.length); // ❌
-array.splice(1);                // ✅
+// ❌
+array.splice(1, string.length);
+
+// ✅
+array.splice(1);
 ```
 
 ```js
-array.splice(1, Infinity); // ❌
-array.splice(1);           // ✅
+// ❌
+array.splice(1, Infinity);
+
+// ✅
+array.splice(1);
 ```
 
 ```js
-array.splice(1, Number.POSITIVE_INFINITY); // ❌
-array.splice(1);                           // ✅
+// ❌
+array.splice(1, Number.POSITIVE_INFINITY);
+
+// ✅
+array.splice(1);
 ```

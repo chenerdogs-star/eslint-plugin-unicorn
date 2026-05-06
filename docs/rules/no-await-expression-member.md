@@ -16,18 +16,27 @@ This rule is fixable for simple member access.
 ## Examples
 
 ```js
-const foo = (await import('./foo.js')).default;  // ❌
-const {default: foo} = await import('./foo.js'); // ✅
+// ❌
+const foo = (await import('./foo.js')).default;
+
+// ✅
+const {default: foo} = await import('./foo.js');
 ```
 
 ```js
-const secondElement = (await getArray())[1]; // ❌
-const [, secondElement] = await getArray();  // ✅
+// ❌
+const secondElement = (await getArray())[1];
+
+// ✅
+const [, secondElement] = await getArray();
 ```
 
 ```js
-const property = (await getObject()).property; // ❌
-const {property} = await getObject();          // ✅
+// ❌
+const property = (await getObject()).property;
+
+// ✅
+const {property} = await getObject();
 ```
 
 ```js

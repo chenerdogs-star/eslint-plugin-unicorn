@@ -52,8 +52,11 @@ const foo = await import('./foo.js');
 ## Examples
 
 ```js
-export {then};            // ❌
-export {then as success}; // ✅
+// ❌
+export {then};
+
+// ✅
+export {then as success};
 ```
 
 ```js
@@ -81,8 +84,11 @@ const foo = {
 ```
 
 ```js
-foo.then = function () {}    // ❌
-foo.success = function () {} // ✅
+// ❌
+foo.then = function () {}
+
+// ✅
+foo.success = function () {}
 ```
 
 ```js

@@ -18,23 +18,35 @@ However, __if you are assigning a listener in a dynamic context, then this rule'
 ## Examples
 
 ```js
-foo.onclick = () => {};                  // ❌
-foo.addEventListener('click', () => {}); // ✅
+// ❌
+foo.onclick = () => {};
+
+// ✅
+foo.addEventListener('click', () => {});
 ```
 
 ```js
-foo.onkeydown = () => {};                  // ❌
-foo.addEventListener('keydown', () => {}); // ✅
+// ❌
+foo.onkeydown = () => {};
+
+// ✅
+foo.addEventListener('keydown', () => {});
 ```
 
 ```js
-foo.bar.onclick = onClick;                  // ❌
-foo.bar.addEventListener('click', onClick); // ✅
+// ❌
+foo.bar.onclick = onClick;
+
+// ✅
+foo.bar.addEventListener('click', onClick);
 ```
 
 ```js
-foo.onclick = null;                        // ❌
-foo.removeEventListener('click', onClick); // ✅
+// ❌
+foo.onclick = null;
+
+// ✅
+foo.removeEventListener('click', onClick);
 ```
 
 ## Options

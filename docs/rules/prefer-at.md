@@ -34,13 +34,19 @@ const foo = array.at(-1);
 ```
 
 ```js
-const foo = array[array.length - 5]; // ❌
-const foo = array.at(-5);            // ✅
+// ❌
+const foo = array[array.length - 5];
+
+// ✅
+const foo = array.at(-5);
 ```
 
 ```js
-const foo = string.charAt(string.length - 5); // ❌
-const foo = string.at(-5);                    // ✅
+// ❌
+const foo = string.charAt(string.length - 5);
+
+// ✅
+const foo = string.at(-5);
 ```
 
 ```js
@@ -118,6 +124,9 @@ Example:
 /* eslint unicorn/prefer-at: ["error", {"getLastElementFunctions": ["utils.lastElement"]}] */
 // ❌
 const foo = utils.lastElement(bar);
+
+// ✅
+const foo = bar.at(-1);
 ```
 
 ## Related rules

@@ -23,16 +23,25 @@ throw new Error('Unexpected property.');
 ```
 
 ```js
-throw new TypeError();                  // ❌
-throw new TypeError('Array expected.'); // ✅
+// ❌
+throw new TypeError();
+
+// ✅
+throw new TypeError('Array expected.');
 ```
 
 ```js
-const error = new AggregateError(errors);                       // ❌
-const error = new AggregateError(errors, 'Promises rejected.'); // ✅
+// ❌
+const error = new AggregateError(errors);
+
+// ✅
+const error = new AggregateError(errors, 'Promises rejected.');
 ```
 
 ```js
-const error = new SuppressedError(error, suppressed);                                // ❌
-const error = new SuppressedError(error, suppressed, 'This is a suppressed error.'); // ✅
+// ❌
+const error = new SuppressedError(error, suppressed);
+
+// ✅
+const error = new SuppressedError(error, suppressed, 'This is a suppressed error.');
 ```

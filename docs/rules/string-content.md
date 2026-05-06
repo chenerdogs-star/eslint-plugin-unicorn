@@ -27,8 +27,11 @@ This rule ignores the following tagged template literals as they're known to con
 ```js
 /* eslint unicorn/string-content: ["error", { "patterns": { "'": "’" } }] */
 
-const foo = 'Someone\'s coming!'; // ❌
-const foo = 'Someone’s coming!';  // ✅
+// ❌
+const foo = 'Someone\'s coming!';
+
+// ✅
+const foo = 'Someone’s coming!';
 ```
 
 ## Options

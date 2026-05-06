@@ -58,13 +58,19 @@ This rule is fixable, except `new String()`, `new Number()`, and `new Boolean()`
 ## Examples
 
 ```js
-const list = Array(10);     // ❌
-const list = new Array(10); // ✅
+// ❌
+const list = Array(10);
+
+// ✅
+const list = new Array(10);
 ```
 
 ```js
-const now = Date();     // ❌
-const now = new Date(); // ✅
+// ❌
+const now = Date();
+
+// ✅
+const now = new Date();
 ```
 
 ```js

@@ -17,33 +17,51 @@ By default, this doesn't apply to numbers below `10_000`, but that can be custom
 ## Examples
 
 ```js
-const foo = 1_23_4444; // ❌
-const foo = 1_234_444; // ✅
+// ❌
+const foo = 1_23_4444;
+
+// ✅
+const foo = 1_234_444;
 ```
 
 ```js
-const foo = 1_234.56789;  // ❌
-const foo = 1_234.567_89; // ✅
+// ❌
+const foo = 1_234.56789;
+
+// ✅
+const foo = 1_234.567_89;
 ```
 
 ```js
-const foo = 0xAB_C_D_EF; // ❌
-const foo = 0xAB_CD_EF;  // ✅
+// ❌
+const foo = 0xAB_C_D_EF;
+
+// ✅
+const foo = 0xAB_CD_EF;
 ```
 
 ```js
-const foo = 0b10_00_1111; // ❌
-const foo = 0b1000_1111;  // ✅
+// ❌
+const foo = 0b10_00_1111;
+
+// ✅
+const foo = 0b1000_1111;
 ```
 
 ```js
-const foo = 0o1_0_44_21; // ❌
-const foo = 0o10_4421;   // ✅
+// ❌
+const foo = 0o1_0_44_21;
+
+// ✅
+const foo = 0o10_4421;
 ```
 
 ```js
-const foo = 1_294_28771_2n; // ❌
-const foo = 1_294_287_712n; // ✅
+// ❌
+const foo = 1_294_28771_2n;
+
+// ✅
+const foo = 1_294_287_712n;
 ```
 
 ## Options
@@ -101,11 +119,20 @@ Numbers are split into 3 distinct parts:
 // ❌
 const foo = 12345;
 
+// ✅
+const foo = 12_345;
+
 // ❌
 const foo = 0.000_0001;
 
+// ✅
+const foo = 0.000_000_1;
+
 // ❌
 const foo = 123.1_000_001;
+
+// ✅
+const foo = 123.100_000_1;
 ```
 
 ```js
@@ -114,14 +141,23 @@ const foo = 123.1_000_001;
 // ❌
 const foo = 0b101010;
 
+// ✅
+const foo = 0b10_1010;
+
 // ❌
 const foo = 0b1010_10001;
+
+// ✅
+const foo = 0b1_0101_0001;
 ```
 
 ```js
 /* eslint unicorn/numeric-separators-style: ["error", {"hexadecimal": {"minimumDigits": 0, "groupLength": 2}}] */
 // ❌
 const foo = 0xA_B_CD_EF;
+
+// ✅
+const foo = 0xAB_CD_EF;
 ```
 
 ```js

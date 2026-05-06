@@ -14,8 +14,11 @@ When using a relative URL in [`new URL()`](https://developer.mozilla.org/en-US/d
 ## Examples
 
 ```js
-const url = new URL('./foo', base); // ❌
-const url = new URL('foo', base);   // ✅
+// ❌
+const url = new URL('./foo', base);
+
+// ✅
+const url = new URL('foo', base);
 ```
 
 ## Options
@@ -31,6 +34,9 @@ Default: `'never'`
 ```js
 /* eslint unicorn/relative-url-style: ["error", "always"] */
 
-const url = new URL('foo', base);   // ❌
-const url = new URL('./foo', base); // ✅
+// ❌
+const url = new URL('foo', base);
+
+// ✅
+const url = new URL('./foo', base);
 ```

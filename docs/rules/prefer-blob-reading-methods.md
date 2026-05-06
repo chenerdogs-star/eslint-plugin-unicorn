@@ -29,8 +29,11 @@ const arrayBuffer = await blob.arrayBuffer();
 ```
 
 ```js
-fileReader.readAsText(blob);    // ❌
-const text = await blob.text(); // ✅
+// ❌
+fileReader.readAsText(blob);
+
+// ✅
+const text = await blob.text();
 ```
 
 ```js

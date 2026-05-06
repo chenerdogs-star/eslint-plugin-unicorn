@@ -14,13 +14,19 @@ Disallow the use of the `null` literal, to encourage using `undefined` instead. 
 ## Examples
 
 ```js
-let foo = null; // ❌
-let foo;        // ✅
+// ❌
+let foo = null;
+
+// ✅
+let foo;
 ```
 
 ```js
-if (bar == null) {}      // ❌
-if (bar == undefined) {} // ✅
+// ❌
+if (bar == null) {}
+
+// ✅
+if (bar == undefined) {}
 ```
 
 ```js
@@ -48,6 +54,9 @@ Strict equality(`===`) and strict inequality(`!==`) is ignored by default.
 /* eslint unicorn/no-null: ["error", {"checkStrictEquality": true}] */
 // ❌
 if (foo === null) {}
+
+// ✅
+if (foo === undefined) {}
 ```
 
 ## Why

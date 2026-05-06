@@ -21,20 +21,29 @@ A condition is considered "simple" if it is:
 ### `&&`
 
 ```js
-if (check(foo) && bar); // ❌
-if (bar && check(foo)); // ✅
+// ❌
+if (check(foo) && bar);
+
+// ✅
+if (bar && check(foo));
 ```
 
 ```js
-if (foo.bar.baz === 1 && bar === 2); // ❌
-if (bar === 2 && foo.bar.baz === 1); // ✅
+// ❌
+if (foo.bar.baz === 1 && bar === 2);
+
+// ✅
+if (bar === 2 && foo.bar.baz === 1);
 ```
 
 ### `||`
 
 ```js
-const x = foo() || bar; // ❌
-const x = bar || foo(); // ✅
+// ❌
+const x = foo() || bar;
+
+// ✅
+const x = bar || foo();
 ```
 
 ## Fix safety

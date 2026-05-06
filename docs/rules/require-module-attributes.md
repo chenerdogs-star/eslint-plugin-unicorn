@@ -14,21 +14,33 @@ Enforce non-empty attribute list in `import`/`export` statements and `import()` 
 ## Examples
 
 ```js
-import foo from 'foo' with {}; // ❌
-import foo from 'foo';         // ✅
+// ❌
+import foo from 'foo' with {};
+
+// ✅
+import foo from 'foo';
 ```
 
 ```js
-export {foo} from 'foo' with {}; // ❌
-export {foo} from 'foo';         // ✅
+// ❌
+export {foo} from 'foo' with {};
+
+// ✅
+export {foo} from 'foo';
 ```
 
 ```js
-const foo = await import('foo', {}); // ❌
-const foo = await import('foo');     // ✅
+// ❌
+const foo = await import('foo', {});
+
+// ✅
+const foo = await import('foo');
 ```
 
 ```js
-const foo = await import('foo', {with: {}}); // ❌
-const foo = await import('foo');             // ✅
+// ❌
+const foo = await import('foo', {with: {}});
+
+// ✅
+const foo = await import('foo');
 ```

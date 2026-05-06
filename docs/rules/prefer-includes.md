@@ -60,8 +60,11 @@ string.includes('foo');
 ```
 
 ```js
-foo.indexOf('foo') === -1 // ❌
-!foo.includes('foo');     // ✅
+// ❌
+foo.indexOf('foo') === -1
+
+// ✅
+!foo.includes('foo');
 ```
 
 ```js
@@ -69,6 +72,9 @@ foo.indexOf('foo') === -1 // ❌
 foo.some(x => {
 	return x === 'foo';
 });
+
+// ✅
+foo.includes('foo');
 ```
 
 ```js

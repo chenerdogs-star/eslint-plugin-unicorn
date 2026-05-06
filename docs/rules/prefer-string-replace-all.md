@@ -14,28 +14,43 @@ The [`String#replaceAll()`](https://developer.mozilla.org/en-US/docs/Web/JavaScr
 ## Examples
 
 ```js
-string.replace(/RegExp with global flag/igu, '');    // ❌
-string.replaceAll(/RegExp with global flag/igu, ''); // ✅
+// ❌
+string.replace(/RegExp with global flag/igu, '');
+
+// ✅
+string.replaceAll(/RegExp with global flag/igu, '');
 ```
 
 ```js
-string.replace(/RegExp without special symbols/g, '');   // ❌
-string.replaceAll('RegExp without special symbols', ''); // ✅
+// ❌
+string.replace(/RegExp without special symbols/g, '');
+
+// ✅
+string.replaceAll('RegExp without special symbols', '');
 ```
 
 ```js
-string.replace(/\(It also checks for escaped regex symbols\)/g, ''); // ❌
-string.replaceAll('(It also checks for escaped regex symbols)', ''); // ✅
+// ❌
+string.replace(/\(It also checks for escaped regex symbols\)/g, '');
+
+// ✅
+string.replaceAll('(It also checks for escaped regex symbols)', '');
 ```
 
 ```js
-string.replace(/Works for u flag too/gu, '');  // ❌
-string.replaceAll('Works for u flag too', ''); // ✅
+// ❌
+string.replace(/Works for u flag too/gu, '');
+
+// ✅
+string.replaceAll('Works for u flag too', '');
 ```
 
 ```js
-string.replaceAll(/foo/g, 'bar'); // ❌
-string.replaceAll('foo', 'bar');  // ✅
+// ❌
+string.replaceAll(/foo/g, 'bar');
+
+// ✅
+string.replaceAll('foo', 'bar');
 ```
 
 ```js

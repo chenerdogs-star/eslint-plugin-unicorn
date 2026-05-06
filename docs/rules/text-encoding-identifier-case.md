@@ -17,18 +17,27 @@ This rule only auto-fix encoding in `fs.readFile()` and `fs.readFileSync()`.
 ## Examples
 
 ```js
-await fs.readFile(file, 'UTF-8'); // ❌
-await fs.readFile(file, 'utf8');  // ✅
+// ❌
+await fs.readFile(file, 'UTF-8');
+
+// ✅
+await fs.readFile(file, 'utf8');
 ```
 
 ```js
-await fs.readFile(file, 'ASCII'); // ❌
-await fs.readFile(file, 'ascii'); // ✅
+// ❌
+await fs.readFile(file, 'ASCII');
+
+// ✅
+await fs.readFile(file, 'ascii');
 ```
 
 ```js
-const string = buffer.toString('utf-8'); // ❌
-const string = buffer.toString('utf8');  // ✅
+// ❌
+const string = buffer.toString('utf-8');
+
+// ✅
+const string = buffer.toString('utf8');
 ```
 
 ## Options
@@ -46,10 +55,7 @@ Use WHATWG standard encoding notation with dashes (e.g., ⁠`utf-8` instead of `
 // ❌
 /* eslint unicorn/text-encoding-identifier-case: ["error", {"withDash": true}] */
 await fs.readFile(file, 'utf8');
-```
 
-```js
 // ✅
-/* eslint unicorn/text-encoding-identifier-case: ["error", {"withDash": true}] */
 await fs.readFile(file, 'utf-8');
 ```
