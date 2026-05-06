@@ -14,17 +14,11 @@ Enforces the use of, for example, `child.remove();` over `child.parentNode.remov
 ## Examples
 
 ```js
-// ❌
-parentNode.removeChild(foo);
-
-// ✅
-foo.remove();
+parentNode.removeChild(foo); // ❌
+foo.remove();                // ✅
 ```
 
 ```js
-// ❌
-parentNode.removeChild(this);
-
-// ✅
-this.remove();
+parentNode.removeChild(this); // ❌
+this.remove();                // ✅
 ```

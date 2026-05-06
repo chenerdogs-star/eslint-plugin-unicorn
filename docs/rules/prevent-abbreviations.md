@@ -20,27 +20,18 @@ This rule is fixable only for variable names with exactly one replacement define
 ## Examples
 
 ```js
-// ❌
-const e = new Error();
-
-// ✅
-const error = new Error();
+const e = new Error();     // ❌
+const error = new Error(); // ✅
 ```
 
 ```js
-// ❌
-const e = document.createEvent('Event');
-
-// ✅
-const event = document.createEvent('Event');
+const e = document.createEvent('Event');     // ❌
+const event = document.createEvent('Event'); // ✅
 ```
 
 ```js
-// ❌
-class Btn {}
-
-// ✅
-class Button {}
+class Btn {}    // ❌
+class Button {} // ✅
 ```
 
 ```js

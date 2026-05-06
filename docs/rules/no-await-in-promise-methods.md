@@ -14,33 +14,21 @@ Using `await` on promises passed as arguments to `Promise.all()`, `Promise.allSe
 ## Examples
 
 ```js
-// ❌
-Promise.all([await promise, anotherPromise]);
-
-// ✅
-Promise.all([promise, anotherPromise]);
+Promise.all([await promise, anotherPromise]); // ❌
+Promise.all([promise, anotherPromise]);       // ✅
 ```
 
 ```js
-// ❌
-Promise.allSettled([await promise, anotherPromise]);
-
-// ✅
-Promise.allSettled([promise, anotherPromise]);
+Promise.allSettled([await promise, anotherPromise]); // ❌
+Promise.allSettled([promise, anotherPromise]);       // ✅
 ```
 
 ```js
-// ❌
-Promise.any([await promise, anotherPromise]);
-
-// ✅
-Promise.any([promise, anotherPromise]);
+Promise.any([await promise, anotherPromise]); // ❌
+Promise.any([promise, anotherPromise]);       // ✅
 ```
 
 ```js
-// ❌
-Promise.race([await promise, anotherPromise]);
-
-// ✅
-Promise.race([promise, anotherPromise]);
+Promise.race([await promise, anotherPromise]); // ❌
+Promise.race([promise, anotherPromise]);       // ✅
 ```

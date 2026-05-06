@@ -14,35 +14,23 @@ Use [`.dataset`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/da
 ## Examples
 
 ```js
-// ❌
-const unicorn = element.getAttribute('data-unicorn');
-
-// ✅
-const {unicorn} = element.dataset;
+const unicorn = element.getAttribute('data-unicorn'); // ❌
+const {unicorn} = element.dataset;                    // ✅
 ```
 
 ```js
-// ❌
-element.setAttribute('data-unicorn', '🦄');
-
-// ✅
-element.dataset.unicorn = '🦄';
+element.setAttribute('data-unicorn', '🦄'); // ❌
+element.dataset.unicorn = '🦄';             // ✅
 ```
 
 ```js
-// ❌
-element.removeAttribute('data-unicorn');
-
-// ✅
-delete element.dataset.unicorn;
+element.removeAttribute('data-unicorn'); // ❌
+delete element.dataset.unicorn;          // ✅
 ```
 
 ```js
-// ❌
-const hasUnicorn = element.hasAttribute('data-unicorn');
-
-// ✅
-const hasUnicorn = Object.hasOwn(element.dataset, 'unicorn');
+const hasUnicorn = element.hasAttribute('data-unicorn');      // ❌
+const hasUnicorn = Object.hasOwn(element.dataset, 'unicorn'); // ✅
 ```
 
 ```js

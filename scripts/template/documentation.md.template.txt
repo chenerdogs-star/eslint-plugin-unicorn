@@ -6,11 +6,8 @@
 ## Examples
 
 ```js
-// ❌
-const foo = 'unicorn';
-
-// ✅
-const foo = '🦄';
+const foo = 'unicorn'; // ❌
+const foo = '🦄';      // ✅
 ```
 
 ```js

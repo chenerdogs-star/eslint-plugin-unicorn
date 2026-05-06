@@ -14,9 +14,6 @@ Prefer using [`Response.json()`](https://developer.mozilla.org/en-US/docs/Web/AP
 ## Examples
 
 ```js
-// ❌
-const response = new Response(JSON.stringify(data));
-
-// ✅
-const response = Response.json(data);
+const response = new Response(JSON.stringify(data)); // ❌
+const response = Response.json(data);                // ✅
 ```

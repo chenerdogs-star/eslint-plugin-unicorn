@@ -14,59 +14,38 @@ Note: This rule uses [`regexp-tree`](https://github.com/DmitrySoshnikov/regexp-t
 ## Examples
 
 ```js
-// ❌
-const regex = /[0-9]/;
-
-// ✅
-const regex = /\d/;
+const regex = /[0-9]/; // ❌
+const regex = /\d/;    // ✅
 ```
 
 ```js
-// ❌
-const regex = /[^0-9]/;
-
-// ✅
-const regex = /\D/;
+const regex = /[^0-9]/; // ❌
+const regex = /\D/;     // ✅
 ```
 
 ```js
-// ❌
-const regex = /[a-zA-Z0-9_]/;
-
-// ✅
-const regex = /\w/;
+const regex = /[a-zA-Z0-9_]/; // ❌
+const regex = /\w/;           // ✅
 ```
 
 ```js
-// ❌
-const regex = /[a-z0-9_]/i;
-
-// ✅
-const regex = /\w/i;
+const regex = /[a-z0-9_]/i; // ❌
+const regex = /\w/i;        // ✅
 ```
 
 ```js
-// ❌
-const regex = /[^a-zA-Z0-9_]/;
-
-// ✅
-const regex = /\W/;
+const regex = /[^a-zA-Z0-9_]/; // ❌
+const regex = /\W/;            // ✅
 ```
 
 ```js
-// ❌
-const regex = /[^a-z0-9_]/i;
-
-// ✅
-const regex = /\W/i;
+const regex = /[^a-z0-9_]/i; // ❌
+const regex = /\W/i;         // ✅
 ```
 
 ```js
-// ❌
-const regex = /[0-9]\.[a-zA-Z0-9_]\-[^0-9]/i;
-
-// ✅
-const regex = /\d\.\w-\D/i;
+const regex = /[0-9]\.[a-zA-Z0-9_]\-[^0-9]/i; // ❌
+const regex = /\d\.\w-\D/i;                   // ✅
 ```
 
 ## Options

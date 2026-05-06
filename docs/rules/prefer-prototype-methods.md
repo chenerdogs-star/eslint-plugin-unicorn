@@ -14,11 +14,8 @@ When “borrowing” a method from `Array` or `Object`, it's clearer to get it f
 ## Examples
 
 ```js
-// ❌
-const array = [].slice.apply(bar);
-
-// ✅
-const array = Array.prototype.slice.apply(bar);
+const array = [].slice.apply(bar);              // ❌
+const array = Array.prototype.slice.apply(bar); // ✅
 ```
 
 ```js
@@ -33,11 +30,8 @@ const type = Object.prototype.toString.call(foo);
 ```
 
 ```js
-// ❌
-Reflect.apply([].forEach, arrayLike, [callback]);
-
-// ✅
-Reflect.apply(Array.prototype.forEach, arrayLike, [callback]);
+Reflect.apply([].forEach, arrayLike, [callback]);              // ❌
+Reflect.apply(Array.prototype.forEach, arrayLike, [callback]); // ✅
 ```
 
 ```js

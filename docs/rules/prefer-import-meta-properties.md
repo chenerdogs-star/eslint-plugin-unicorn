@@ -22,11 +22,8 @@ This rule replaces legacy patterns with `import.meta.{dirname,filename}`.
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
-// ❌
-const filename = fileURLToPath(import.meta.url);
-
-// ✅
-const filename = import.meta.filename;
+const filename = fileURLToPath(import.meta.url); // ❌
+const filename = import.meta.filename;           // ✅
 ```
 
 ```js

@@ -14,35 +14,23 @@ Enforces a consistent escaped value style by defining escape sequence values wit
 ## Examples
 
 ```js
-// ❌
-const foo = '\xa9';
-
-// ✅
-const foo = '\xA9';
+const foo = '\xa9'; // ❌
+const foo = '\xA9'; // ✅
 ```
 
 ```js
-// ❌
-const foo = '\ud834';
-
-// ✅
-const foo = '\uD834';
+const foo = '\ud834'; // ❌
+const foo = '\uD834'; // ✅
 ```
 
 ```js
-// ❌
-const foo = '\u{1d306}';
-
-// ✅
-const foo = '\u{1D306}';
+const foo = '\u{1d306}'; // ❌
+const foo = '\u{1D306}'; // ✅
 ```
 
 ```js
-// ❌
-const foo = '\ca';
-
-// ✅
-const foo = '\cA';
+const foo = '\ca'; // ❌
+const foo = '\cA'; // ✅
 ```
 
 ## Options
@@ -64,33 +52,21 @@ Example:
 ```
 
 ```js
-// ❌
-const foo = '\xA9';
-
-// ✅
-const foo = '\xa9';
+const foo = '\xA9'; // ❌
+const foo = '\xa9'; // ✅
 ```
 
 ```js
-// ❌
-const foo = '\uD834';
-
-// ✅
-const foo = '\ud834';
+const foo = '\uD834'; // ❌
+const foo = '\ud834'; // ✅
 ```
 
 ```js
-// ❌
-const foo = '\u{1D306}';
-
-// ✅
-const foo = '\u{1d306}';
+const foo = '\u{1D306}'; // ❌
+const foo = '\u{1d306}'; // ✅
 ```
 
 ```js
-// ❌
-const foo = '\cA';
-
-// ✅
-const foo = '\ca';
+const foo = '\cA'; // ❌
+const foo = '\ca'; // ✅
 ```

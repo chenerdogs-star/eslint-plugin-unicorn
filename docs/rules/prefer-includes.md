@@ -60,11 +60,8 @@ string.includes('foo');
 ```
 
 ```js
-// ❌
-foo.indexOf('foo') === -1
-
-// ✅
-!foo.includes('foo');
+foo.indexOf('foo') === -1 // ❌
+!foo.includes('foo');     // ✅
 ```
 
 ```js

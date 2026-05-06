@@ -16,9 +16,6 @@ The [`Date` constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript
 ## Examples
 
 ```js
-// ❌
-new Date(date.getTime());
-
-// ✅
-new Date(date);
+new Date(date.getTime()); // ❌
+new Date(date);           // ✅
 ```

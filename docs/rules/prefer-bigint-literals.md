@@ -14,17 +14,11 @@ Use `1n` instead of `BigInt(1)`.
 ## Examples
 
 ```js
-// ❌
-const bigint = BigInt(1);
-
-// ✅
-const bigint = 1n;
+const bigint = BigInt(1); // ❌
+const bigint = 1n;        // ✅
 ```
 
 ```js
-// ❌
-const bigint = BigInt('1');
-
-// ✅
-const bigint = 1n;
+const bigint = BigInt('1'); // ❌
+const bigint = 1n;          // ✅
 ```

@@ -14,11 +14,8 @@ Improved version of the [`no-nested-ternary`](https://eslint.org/docs/latest/rul
 ## Examples
 
 ```js
-// ❌
-const foo = i > 5 ? i < 100 ? true : false : true;
-
-// ✅
-const foo = i > 5 ? (i < 100 ? true : false) : true;
+const foo = i > 5 ? i < 100 ? true : false : true;   // ❌
+const foo = i > 5 ? (i < 100 ? true : false) : true; // ✅
 ```
 
 ```js

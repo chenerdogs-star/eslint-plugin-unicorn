@@ -22,27 +22,18 @@ if (array.length === 0 || array.every(Boolean));
 ```
 
 ```js
-// ❌
-if (array.length !== 0 && array.some(Boolean));
-
-// ✅
-if (array.every(Boolean));
+if (array.length !== 0 && array.some(Boolean)); // ❌
+if (array.every(Boolean));                      // ✅
 ```
 
 ```js
-// ❌
-if (array.length > 0 && array.some(Boolean));
-
-// ✅
-if (array.some(Boolean));
+if (array.length > 0 && array.some(Boolean)); // ❌
+if (array.some(Boolean));                     // ✅
 ```
 
 ```js
-// ❌
-const isAllTrulyOrEmpty = array.length === 0 || array.every(Boolean);
-
-// ✅
-const isAllTrulyOrEmpty = array.every(Boolean);
+const isAllTrulyOrEmpty = array.length === 0 || array.every(Boolean); // ❌
+const isAllTrulyOrEmpty = array.every(Boolean);                       // ✅
 ```
 
 ```js

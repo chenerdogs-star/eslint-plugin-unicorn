@@ -19,11 +19,8 @@ This rule defines 4 import styles:
 ## Examples
 
 ```js
-// ❌
-const util = require('node:util');
-
-// ✅
-const {promisify} = require('node:util');
+const util = require('node:util');        // ❌
+const {promisify} = require('node:util'); // ✅
 ```
 
 ```js

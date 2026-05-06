@@ -26,27 +26,18 @@ The following names are ignored:
 ## Examples
 
 ```js
-// ❌
-try {} catch (badName) {}
-
-// ✅
-try {} catch (error) {}
+try {} catch (badName) {} // ❌
+try {} catch (error) {}   // ✅
 ```
 
 ```js
-// ❌
-promise.catch(badName => {});
-
-// ✅
-promise.catch(error => {});
+promise.catch(badName => {}); // ❌
+promise.catch(error => {});   // ✅
 ```
 
 ```js
-// ❌
-promise.then(undefined, badName => {});
-
-// ✅
-promise.then(undefined, error => {});
+promise.then(undefined, badName => {}); // ❌
+promise.then(undefined, error => {});   // ✅
 ```
 
 ```js

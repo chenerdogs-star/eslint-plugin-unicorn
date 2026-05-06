@@ -33,11 +33,8 @@ This rule is fixable when the callback is an arrow function and the `thisArg` ar
 ## Examples
 
 ```js
-// ❌
-const foo = bar.find(element => isUnicorn(element), baz);
-
-// ✅
-const foo = bar.find(element => isUnicorn(element));
+const foo = bar.find(element => isUnicorn(element), baz); // ❌
+const foo = bar.find(element => isUnicorn(element));      // ✅
 ```
 
 ```js

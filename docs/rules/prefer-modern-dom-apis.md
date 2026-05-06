@@ -25,81 +25,51 @@ There are some advantages of using the newer DOM APIs, like:
 ## Examples
 
 ```js
-// ❌
-parentNode.replaceChild(newNode, oldNode);
-
-// ✅
-oldNode.replaceWith(newNode);
+parentNode.replaceChild(newNode, oldNode); // ❌
+oldNode.replaceWith(newNode);              // ✅
 ```
 
 ```js
-// ❌
-parentNode.insertBefore(newNode, oldNode);
-
-// ✅
-oldNode.before(newNode);
+parentNode.insertBefore(newNode, oldNode); // ❌
+oldNode.before(newNode);                   // ✅
 ```
 
 ```js
-// ❌
-referenceNode.insertAdjacentText('beforebegin', 'text');
-
-// ✅
-referenceNode.before('text');
+referenceNode.insertAdjacentText('beforebegin', 'text'); // ❌
+referenceNode.before('text');                            // ✅
 ```
 
 ```js
-// ❌
-referenceNode.insertAdjacentText('afterbegin', 'text');
-
-// ✅
-referenceNode.prepend('text');
+referenceNode.insertAdjacentText('afterbegin', 'text'); // ❌
+referenceNode.prepend('text');                          // ✅
 ```
 
 ```js
-// ❌
-referenceNode.insertAdjacentText('beforeend', 'text');
-
-// ✅
-referenceNode.append('text');
+referenceNode.insertAdjacentText('beforeend', 'text'); // ❌
+referenceNode.append('text');                          // ✅
 ```
 
 ```js
-// ❌
-referenceNode.insertAdjacentText('afterend', 'text');
-
-// ✅
-referenceNode.after('text');
+referenceNode.insertAdjacentText('afterend', 'text'); // ❌
+referenceNode.after('text');                          // ✅
 ```
 
 ```js
-// ❌
-referenceNode.insertAdjacentElement('beforebegin', newNode);
-
-// ✅
-referenceNode.before(newNode);
+referenceNode.insertAdjacentElement('beforebegin', newNode); // ❌
+referenceNode.before(newNode);                               // ✅
 ```
 
 ```js
-// ❌
-referenceNode.insertAdjacentElement('afterbegin', newNode);
-
-// ✅
-referenceNode.prepend(newNode);
+referenceNode.insertAdjacentElement('afterbegin', newNode); // ❌
+referenceNode.prepend(newNode);                             // ✅
 ```
 
 ```js
-// ❌
-referenceNode.insertAdjacentElement('beforeend', newNode);
-
-// ✅
-referenceNode.append(newNode);
+referenceNode.insertAdjacentElement('beforeend', newNode); // ❌
+referenceNode.append(newNode);                             // ✅
 ```
 
 ```js
-// ❌
-referenceNode.insertAdjacentElement('afterend', newNode);
-
-// ✅
-referenceNode.after(newNode);
+referenceNode.insertAdjacentElement('afterend', newNode); // ❌
+referenceNode.after(newNode);                             // ✅
 ```

@@ -60,11 +60,8 @@ if (array.some(element => isUnicorn(element))) {
 ```
 
 ```js
-// ❌
-const foo = array.find(element => isUnicorn(element)) ? bar : baz;
-
-// ✅
-const foo = array.find(element => isUnicorn(element)) || bar;
+const foo = array.find(element => isUnicorn(element)) ? bar : baz; // ❌
+const foo = array.find(element => isUnicorn(element)) || bar;      // ✅
 ```
 
 ```js

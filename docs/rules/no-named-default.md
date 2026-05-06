@@ -14,27 +14,18 @@ Enforces the use of the [`default import`](https://developer.mozilla.org/en-US/d
 ## Examples
 
 ```js
-// ❌
-import {default as foo} from 'foo';
-
-// ✅
-import foo from 'foo';
+import {default as foo} from 'foo'; // ❌
+import foo from 'foo';              // ✅
 ```
 
 ```js
-// ❌
-import {default as foo, bar} from 'foo';
-
-// ✅
-import foo, {bar} from 'foo';
+import {default as foo, bar} from 'foo'; // ❌
+import foo, {bar} from 'foo';            // ✅
 ```
 
 ```js
-// ❌
-export {foo as default};
-
-// ✅
-export default foo;
+export {foo as default}; // ❌
+export default foo;      // ✅
 ```
 
 ```js

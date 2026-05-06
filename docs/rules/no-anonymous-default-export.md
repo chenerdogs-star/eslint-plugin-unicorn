@@ -14,19 +14,13 @@ Naming default exports improves codebase searchability by ensuring consistent id
 ## Examples
 
 ```js
-// ❌
-export default class {}
-
-// ✅
-export default class Foo {}
+export default class {}     // ❌
+export default class Foo {} // ✅
 ```
 
 ```js
-// ❌
-export default function () {}
-
-// ✅
-export default function foo () {}
+export default function () {}     // ❌
+export default function foo () {} // ✅
 ```
 
 ```js
@@ -39,19 +33,13 @@ export default foo;
 ```
 
 ```js
-// ❌
-module.exports = class {};
-
-// ✅
-module.exports = class Foo {};
+module.exports = class {};     // ❌
+module.exports = class Foo {}; // ✅
 ```
 
 ```js
-// ❌
-module.exports = function () {};
-
-// ✅
-module.exports = function foo () {};
+module.exports = function () {};     // ❌
+module.exports = function foo () {}; // ✅
 ```
 
 ```js

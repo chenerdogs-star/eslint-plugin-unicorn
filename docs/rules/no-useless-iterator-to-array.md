@@ -48,27 +48,18 @@ This rule does not flag `.filter()`, `.map()`, or `.flatMap()` because their `It
 ## Examples
 
 ```js
-// ❌
-const set = new Set(iterator.toArray());
-
-// ✅
-const set = new Set(iterator);
+const set = new Set(iterator.toArray()); // ❌
+const set = new Set(iterator);           // ✅
 ```
 
 ```js
-// ❌
-const results = await Promise.all(iterator.toArray());
-
-// ✅
-const results = await Promise.all(iterator);
+const results = await Promise.all(iterator.toArray()); // ❌
+const results = await Promise.all(iterator);           // ✅
 ```
 
 ```js
-// ❌
-for (const item of iterator.toArray());
-
-// ✅
-for (const item of iterator);
+for (const item of iterator.toArray()); // ❌
+for (const item of iterator);           // ✅
 ```
 
 ```js
@@ -84,27 +75,18 @@ function * foo() {
 ```
 
 ```js
-// ❌
-const items = [...iterator.toArray()];
-
-// ✅
-const items = [...iterator];
+const items = [...iterator.toArray()]; // ❌
+const items = [...iterator];           // ✅
 ```
 
 ```js
-// ❌
-call(...iterator.toArray());
-
-// ✅
-call(...iterator);
+call(...iterator.toArray()); // ❌
+call(...iterator);           // ✅
 ```
 
 ```js
-// ❌
-iterator.toArray().every(fn);
-
-// ✅
-iterator.every(fn);
+iterator.toArray().every(fn); // ❌
+iterator.every(fn);           // ✅
 ```
 
 ```js

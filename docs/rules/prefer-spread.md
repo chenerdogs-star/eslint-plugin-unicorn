@@ -42,19 +42,13 @@ To enforce the spread operator over `Object#assign()`, use the built-in [`prefer
 ## Examples
 
 ```js
-// ❌
-Array.from(set).map(element => foo(element));
-
-// ✅
-[...set].map(element => foo(element));
+Array.from(set).map(element => foo(element)); // ❌
+[...set].map(element => foo(element));        // ✅
 ```
 
 ```js
-// ❌
-const array = array1.concat(array2);
-
-// ✅
-const array = [...array1, ...array2];
+const array = array1.concat(array2);  // ❌
+const array = [...array1, ...array2]; // ✅
 ```
 
 ```js
@@ -72,11 +66,8 @@ const copy = [...array];
 ```
 
 ```js
-// ❌
-const characters = string.split('');
-
-// ✅
-const characters = [...string];
+const characters = string.split(''); // ❌
+const characters = [...string];      // ✅
 ```
 
 ```js

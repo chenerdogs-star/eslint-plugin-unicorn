@@ -19,11 +19,8 @@ import assert from 'node:assert/strict';
 assert.strictEqual(actual, expected);
 assert.deepStrictEqual(actual, expected);
 
-// ❌
-assert(divide(10, 2) === 5);
-
-// ✅
-assert.ok(divide(10, 2) === 5);
+assert(divide(10, 2) === 5);    // ❌
+assert.ok(divide(10, 2) === 5); // ✅
 ```
 
 ```js
@@ -32,11 +29,8 @@ import assert from 'node:assert';
 assert.strictEqual(actual, expected);
 assert.deepStrictEqual(actual, expected);
 
-// ❌
-assert(divide(10, 2) === 5);
-
-// ✅
-assert.ok(divide(10, 2) === 5);
+assert(divide(10, 2) === 5);    // ❌
+assert.ok(divide(10, 2) === 5); // ✅
 ```
 
 ```js
@@ -45,9 +39,6 @@ import {strict as assert} from 'node:assert';
 assert.strictEqual(actual, expected);
 assert.deepStrictEqual(actual, expected);
 
-// ❌
-assert(divide(10, 2) === 5);
-
-// ✅
-assert.ok(divide(10, 2) === 5);
+assert(divide(10, 2) === 5);    // ❌
+assert.ok(divide(10, 2) === 5); // ✅
 ```

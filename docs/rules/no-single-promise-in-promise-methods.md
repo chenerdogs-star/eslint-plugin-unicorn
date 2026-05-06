@@ -28,11 +28,8 @@ const foo = await promise;
 ```
 
 ```js
-// ❌
-const promise = Promise.all([nonPromise]);
-
-// ✅
-const promise = Promise.resolve(nonPromise);
+const promise = Promise.all([nonPromise]);   // ❌
+const promise = Promise.resolve(nonPromise); // ✅
 ```
 
 ```js

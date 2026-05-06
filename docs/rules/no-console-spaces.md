@@ -31,35 +31,23 @@ console.log('abc', 'def');
 ```
 
 ```js
-// ❌
-console.debug('abc ', 'def');
-
-// ✅
-console.debug('abc', 'def');
+console.debug('abc ', 'def'); // ❌
+console.debug('abc', 'def');  // ✅
 ```
 
 ```js
-// ❌
-console.info('abc ', 'def');
-
-// ✅
-console.info('abc', 'def');
+console.info('abc ', 'def'); // ❌
+console.info('abc', 'def');  // ✅
 ```
 
 ```js
-// ❌
-console.warn('abc ', 'def');
-
-// ✅
-console.warn('abc', 'def');
+console.warn('abc ', 'def'); // ❌
+console.warn('abc', 'def');  // ✅
 ```
 
 ```js
-// ❌
-console.error('abc ', 'def');
-
-// ✅
-console.error('abc', 'def');
+console.error('abc ', 'def'); // ❌
+console.error('abc', 'def');  // ✅
 ```
 
 ```js

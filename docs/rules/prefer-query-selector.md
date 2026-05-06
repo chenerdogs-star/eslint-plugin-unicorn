@@ -14,35 +14,23 @@ It's better to use the same method to query DOM elements. This helps keep consis
 ## Examples
 
 ```js
-// ❌
-document.getElementById('foo');
-
-// ✅
-document.querySelector('#foo');
+document.getElementById('foo'); // ❌
+document.querySelector('#foo'); // ✅
 ```
 
 ```js
-// ❌
-document.getElementsByClassName('foo');
-
-// ✅
-document.querySelectorAll('.foo');
+document.getElementsByClassName('foo'); // ❌
+document.querySelectorAll('.foo');      // ✅
 ```
 
 ```js
-// ❌
-document.getElementsByClassName('foo bar');
-
-// ✅
-document.querySelectorAll('.foo.bar');
+document.getElementsByClassName('foo bar'); // ❌
+document.querySelectorAll('.foo.bar');      // ✅
 ```
 
 ```js
-// ❌
-document.getElementsByTagName('main');
-
-// ✅
-document.querySelectorAll('main');
+document.getElementsByTagName('main'); // ❌
+document.querySelectorAll('main');     // ✅
 ```
 
 ```js

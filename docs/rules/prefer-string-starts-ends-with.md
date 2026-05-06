@@ -16,19 +16,13 @@ This rule is fixable, unless the matching object is known not a string.
 ## Examples
 
 ```js
-// ❌
-const foo = /^bar/.test(baz);
-
-// ✅
-const foo = baz.startsWith('bar');
+const foo = /^bar/.test(baz);      // ❌
+const foo = baz.startsWith('bar'); // ✅
 ```
 
 ```js
-// ❌
-const foo = /bar$/.test(baz);
-
-// ✅
-const foo = baz.endsWith('bar');
+const foo = /bar$/.test(baz);    // ❌
+const foo = baz.endsWith('bar'); // ✅
 ```
 
 ```js

@@ -16,17 +16,11 @@ Unicode is better supported in [`String#codePointAt()`](https://developer.mozill
 ## Examples
 
 ```js
-// ❌
-const unicorn = '🦄'.charCodeAt(0).toString(16);
-
-// ✅
-const unicorn = '🦄'.codePointAt(0).toString(16);
+const unicorn = '🦄'.charCodeAt(0).toString(16);  // ❌
+const unicorn = '🦄'.codePointAt(0).toString(16); // ✅
 ```
 
 ```js
-// ❌
-const unicorn = String.fromCharCode(0x1f984);
-
-// ✅
-const unicorn = String.fromCodePoint(0x1f984);
+const unicorn = String.fromCharCode(0x1f984);  // ❌
+const unicorn = String.fromCodePoint(0x1f984); // ✅
 ```

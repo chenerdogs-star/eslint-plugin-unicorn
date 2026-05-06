@@ -16,11 +16,8 @@ Prefer using [`Array#toReversed()`](https://developer.mozilla.org/en-US/docs/Web
 ## Examples
 
 ```js
-// ❌
-const reversed = [...array].reverse();
-
-// ✅
-const reversed = [...array].toReversed();
+const reversed = [...array].reverse();    // ❌
+const reversed = [...array].toReversed(); // ✅
 ```
 
 ## Options

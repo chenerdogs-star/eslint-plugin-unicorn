@@ -18,25 +18,16 @@ Note that there are [differences](https://developer.mozilla.org/en-US/docs/Web/A
 ## Examples
 
 ```js
-// ❌
-const text = foo.innerText;
-
-// ✅
-const text = foo.textContent;
+const text = foo.innerText;   // ❌
+const text = foo.textContent; // ✅
 ```
 
 ```js
-// ❌
-const {innerText} = foo;
-
-// ✅
-const {textContent} = foo;
+const {innerText} = foo;   // ❌
+const {textContent} = foo; // ✅
 ```
 
 ```js
-// ❌
-foo.innerText = '🦄';
-
-// ✅
-foo.textContent = '🦄';
+foo.innerText = '🦄';   // ❌
+foo.textContent = '🦄'; // ✅
 ```

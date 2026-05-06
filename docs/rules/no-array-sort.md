@@ -16,27 +16,18 @@ Prefer using [`Array#toSorted()`](https://developer.mozilla.org/en-US/docs/Web/J
 ## Examples
 
 ```js
-// ❌
-const sorted = [...array].sort();
-
-// ✅
-const sorted = array.toSorted();
+const sorted = [...array].sort(); // ❌
+const sorted = array.toSorted();  // ✅
 ```
 
 ```js
-// ❌
-const sorted = [...iterable].sort();
-
-// ✅
-const sorted = [...iterable].toSorted();
+const sorted = [...iterable].sort();     // ❌
+const sorted = [...iterable].toSorted(); // ✅
 ```
 
 ```js
-// ❌
-const sorted = [...array].sort((a, b) => a - b);
-
-// ✅
-const sorted = array.toSorted((a, b) => a - b);
+const sorted = [...array].sort((a, b) => a - b); // ❌
+const sorted = array.toSorted((a, b) => a - b);  // ✅
 ```
 
 ## Options

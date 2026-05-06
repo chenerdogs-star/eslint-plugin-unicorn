@@ -28,11 +28,8 @@ const array = Array.from({length});
 ```
 
 ```js
-// ❌
-const array = new Array(onlyElement);
-
-// ✅
-const array = [onlyElement];
+const array = new Array(onlyElement); // ❌
+const array = [onlyElement];          // ✅
 ```
 
 ```js

@@ -14,17 +14,11 @@ Passing `1` as the `depth` argument to [`Array#flat(depth)`](https://developer.m
 ## Examples
 
 ```js
-// ❌
-foo.flat(1);
-
-// ✅
-foo.flat();
+foo.flat(1); // ❌
+foo.flat();  // ✅
 ```
 
 ```js
-// ❌
-foo?.flat(1);
-
-// ✅
-foo?.flat();
+foo?.flat(1); // ❌
+foo?.flat();  // ✅
 ```

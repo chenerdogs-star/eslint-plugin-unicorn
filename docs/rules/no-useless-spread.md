@@ -35,59 +35,38 @@
 ## Examples
 
 ```js
-// ❌
-const array = [firstElement, ...[secondElement], thirdElement];
-
-// ✅
-const array = [firstElement, secondElement, thirdElement];
+const array = [firstElement, ...[secondElement], thirdElement]; // ❌
+const array = [firstElement, secondElement, thirdElement];      // ✅
 ```
 
 ```js
-// ❌
-const object = {firstProperty, ...{secondProperty}, thirdProperty};
-
-// ✅
-const object = {firstProperty, secondProperty, thirdProperty};
+const object = {firstProperty, ...{secondProperty}, thirdProperty}; // ❌
+const object = {firstProperty, secondProperty, thirdProperty};      // ✅
 ```
 
 ```js
-// ❌
-foo(firstArgument, ...[secondArgument], thirdArgument);
-
-// ✅
-foo(firstArgument, secondArgument, thirdArgument);
+foo(firstArgument, ...[secondArgument], thirdArgument); // ❌
+foo(firstArgument, secondArgument, thirdArgument);      // ✅
 ```
 
 ```js
-// ❌
-const object = new Foo(firstArgument, ...[secondArgument], thirdArgument);
-
-// ✅
-const object = new Foo(firstArgument, secondArgument, thirdArgument);
+const object = new Foo(firstArgument, ...[secondArgument], thirdArgument); // ❌
+const object = new Foo(firstArgument, secondArgument, thirdArgument);      // ✅
 ```
 
 ```js
-// ❌
-const set = new Set([...iterable]);
-
-// ✅
-const set = new Set(iterable);
+const set = new Set([...iterable]); // ❌
+const set = new Set(iterable);      // ✅
 ```
 
 ```js
-// ❌
-const results = await Promise.all([...iterable]);
-
-// ✅
-const results = await Promise.all(iterable);
+const results = await Promise.all([...iterable]); // ❌
+const results = await Promise.all(iterable);      // ✅
 ```
 
 ```js
-// ❌
-for (const foo of [...set]);
-
-// ✅
-for (const foo of set);
+for (const foo of [...set]); // ❌
+for (const foo of set);      // ✅
 ```
 
 ```js

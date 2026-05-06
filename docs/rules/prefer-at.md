@@ -34,19 +34,13 @@ const foo = array.at(-1);
 ```
 
 ```js
-// ❌
-const foo = array[array.length - 5];
-
-// ✅
-const foo = array.at(-5);
+const foo = array[array.length - 5]; // ❌
+const foo = array.at(-5);            // ✅
 ```
 
 ```js
-// ❌
-const foo = string.charAt(string.length - 5);
-
-// ✅
-const foo = string.at(-5);
+const foo = string.charAt(string.length - 5); // ❌
+const foo = string.at(-5);                    // ✅
 ```
 
 ```js

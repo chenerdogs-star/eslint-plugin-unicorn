@@ -31,9 +31,6 @@ const foo = Date.now();
 ```
 
 ```js
-// ❌
-const foo = new Date() * 2;
-
-// ✅
-const foo = Date.now() * 2;
+const foo = new Date() * 2; // ❌
+const foo = Date.now() * 2; // ✅
 ```

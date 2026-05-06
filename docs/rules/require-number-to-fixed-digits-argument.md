@@ -14,11 +14,8 @@ It's better to make it clear what the value of the `digits` argument is when cal
 ## Examples
 
 ```js
-// ❌
-const string = number.toFixed();
-
-// ✅
-const string = number.toFixed(0);
+const string = number.toFixed();  // ❌
+const string = number.toFixed(0); // ✅
 ```
 
 ```js

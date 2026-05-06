@@ -32,17 +32,11 @@ const request = new Request('/', {method: 'HEAD'});
 ```
 
 ```js
-// ❌
-const response = await fetch('/', {method: 'GET', body: 'foo=bar'});
-
-// ✅
-const response = await fetch('/', {method: 'POST', body: 'foo=bar'});
+const response = await fetch('/', {method: 'GET', body: 'foo=bar'});  // ❌
+const response = await fetch('/', {method: 'POST', body: 'foo=bar'}); // ✅
 ```
 
 ```js
-// ❌
-const request = new Request('/', {method: 'GET', body: 'foo=bar'});
-
-// ✅
-const request = new Request('/', {method: 'POST', body: 'foo=bar'});
+const request = new Request('/', {method: 'GET', body: 'foo=bar'});  // ❌
+const request = new Request('/', {method: 'POST', body: 'foo=bar'}); // ✅
 ```

@@ -75,11 +75,8 @@ Math.hypot(a, b)
 ```
 
 ```js
-// ❌
-Math.sqrt(x ** 2)
-
-// ✅
-Math.abs(x)
+Math.sqrt(x ** 2) // ❌
+Math.abs(x)       // ✅
 ```
 
 ## Separate rule for `Math.trunc()`

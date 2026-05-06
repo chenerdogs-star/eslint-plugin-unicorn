@@ -47,11 +47,8 @@ const isEmpty = foo.length === 0;
 ```
 
 ```js
-// ❌
-const isEmptySet = !foo.size;
-
-// ✅
-const isEmptySet = foo.size === 0;
+const isEmptySet = !foo.size;      // ❌
+const isEmptySet = foo.size === 0; // ✅
 ```
 
 ```vue
@@ -104,43 +101,28 @@ const isNotEmpty = foo.length > 0;
 ```
 
 ```js
-// ❌
-if (foo.length || bar.length) {}
-
-// ✅
-if (foo.length > 0 || bar.length > 0) {}
+if (foo.length || bar.length) {}         // ❌
+if (foo.length > 0 || bar.length > 0) {} // ✅
 ```
 
 ```js
-// ❌
-const unicorn = foo.length ? 1 : 2;
-
-// ✅
-const unicorn = foo.length > 0 ? 1 : 2;
+const unicorn = foo.length ? 1 : 2;     // ❌
+const unicorn = foo.length > 0 ? 1 : 2; // ✅
 ```
 
 ```js
-// ❌
-while (foo.length) {}
-
-// ✅
-while (foo.length > 0) {}
+while (foo.length) {}     // ❌
+while (foo.length > 0) {} // ✅
 ```
 
 ```js
-// ❌
-do {} while (foo.length);
-
-// ✅
-do {} while (foo.length > 0);
+do {} while (foo.length);     // ❌
+do {} while (foo.length > 0); // ✅
 ```
 
 ```js
-// ❌
-for (; foo.length; ) {};
-
-// ✅
-for (; foo.length > 0; ) {};
+for (; foo.length; ) {};     // ❌
+for (; foo.length > 0; ) {}; // ✅
 ```
 
 ### Options

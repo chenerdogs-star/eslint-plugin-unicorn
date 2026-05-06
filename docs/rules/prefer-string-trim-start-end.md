@@ -14,17 +14,11 @@
 ## Examples
 
 ```js
-// ❌
-const foo = bar.trimLeft();
-
-// ✅
-const foo = bar.trimStart();
+const foo = bar.trimLeft();  // ❌
+const foo = bar.trimStart(); // ✅
 ```
 
 ```js
-// ❌
-const foo = bar.trimRight();
-
-// ✅
-const foo = bar.trimEnd();
+const foo = bar.trimRight(); // ❌
+const foo = bar.trimEnd();   // ✅
 ```

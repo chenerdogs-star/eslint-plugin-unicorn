@@ -22,11 +22,8 @@ function foo(options) {
 ```
 
 ```js
-// ❌
-const abc = (foo = {a: false, b: 123}) => {};
-
-// ✅
-const foo = ({a = false, b = 123}) => {};
+const abc = (foo = {a: false, b: 123}) => {}; // ❌
+const foo = ({a = false, b = 123}) => {};     // ✅
 ```
 
 ```js

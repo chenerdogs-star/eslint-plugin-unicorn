@@ -24,19 +24,13 @@ const [, foo] = parts;
 ```
 
 ```js
-// ❌
-const [,, foo] = parts;
-
-// ✅
-const foo = parts[2];
+const [,, foo] = parts; // ❌
+const foo = parts[2];   // ✅
 ```
 
 ```js
-// ❌
-const [,,, foo] = parts;
-
-// ✅
-const foo = parts[3];
+const [,,, foo] = parts; // ❌
+const foo = parts[3];    // ✅
 ```
 
 ```js
@@ -45,11 +39,8 @@ const [,...rest] = parts;
 ```
 
 ```js
-// ❌
-const [,,...rest] = parts;
-
-// ✅
-const rest = parts.slice(2);
+const [,,...rest] = parts;   // ❌
+const rest = parts.slice(2); // ✅
 ```
 
 ## Note

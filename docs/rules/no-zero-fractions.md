@@ -25,35 +25,23 @@ const foo = 1;
 ```
 
 ```js
-// ❌
-const foo = -1.0;
-
-// ✅
-const foo = -1;
+const foo = -1.0; // ❌
+const foo = -1;   // ✅
 ```
 
 ```js
-// ❌
-const foo = 123_456.000_000;
-
-// ✅
-const foo = 123_456;
+const foo = 123_456.000_000; // ❌
+const foo = 123_456;         // ✅
 ```
 
 ```js
-// ❌
-const foo = 123.111000000;
-
-// ✅
-const foo = 123.111;
+const foo = 123.111000000; // ❌
+const foo = 123.111;       // ✅
 ```
 
 ```js
-// ❌
-const foo = 123.00e20;
-
-// ✅
-const foo = 123e20;
+const foo = 123.00e20; // ❌
+const foo = 123e20;    // ✅
 ```
 
 ```js

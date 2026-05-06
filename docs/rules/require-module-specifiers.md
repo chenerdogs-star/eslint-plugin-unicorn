@@ -14,27 +14,18 @@ Enforce non-empty specifier list in `import` and `export` statements. Use a [sid
 ## Examples
 
 ```js
-// ❌
-import {} from 'foo';
-
-// ✅
-import 'foo';
+import {} from 'foo'; // ❌
+import 'foo';         // ✅
 ```
 
 ```js
-// ❌
-import foo, {} from 'foo';
-
-// ✅
-import foo from 'foo';
+import foo, {} from 'foo'; // ❌
+import foo from 'foo';     // ✅
 ```
 
 ```js
-// ❌
-export {} from 'foo';
-
-// ✅
-import 'foo';
+export {} from 'foo'; // ❌
+import 'foo';         // ✅
 ```
 
 ```js

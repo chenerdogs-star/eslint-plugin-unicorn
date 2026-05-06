@@ -14,25 +14,16 @@ While it's possible to create a new error without using the `new` keyword, it's 
 ## Examples
 
 ```js
-// ❌
-const error = Error('unicorn');
-
-// ✅
-const error = new Error('unicorn');
+const error = Error('unicorn');     // ❌
+const error = new Error('unicorn'); // ✅
 ```
 
 ```js
-// ❌
-throw TypeError('unicorn');
-
-// ✅
-throw new TypeError('unicorn');
+throw TypeError('unicorn');     // ❌
+throw new TypeError('unicorn'); // ✅
 ```
 
 ```js
-// ❌
-throw lib.TypeError('unicorn');
-
-// ✅
-throw new lib.TypeError('unicorn');
+throw lib.TypeError('unicorn');     // ❌
+throw new lib.TypeError('unicorn'); // ✅
 ```

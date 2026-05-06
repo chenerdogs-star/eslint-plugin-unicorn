@@ -18,27 +18,18 @@ Using `undefined` as arrow function body sometimes make the purpose more explici
 ## Examples
 
 ```js
-// ❌
-let foo = undefined;
-
-// ✅
-let foo;
+let foo = undefined; // ❌
+let foo;             // ✅
 ```
 
 ```js
-// ❌
-const {foo = undefined} = bar;
-
-// ✅
-const {foo} = bar;
+const {foo = undefined} = bar; // ❌
+const {foo} = bar;             // ✅
 ```
 
 ```js
-// ❌
-const noop = () => undefined;
-
-// ✅
-const noop = () => {};
+const noop = () => undefined; // ❌
+const noop = () => {};        // ✅
 ```
 
 ```js
@@ -86,11 +77,8 @@ function foo({bar}) {
 ```
 
 ```js
-// ❌
-foo(undefined);
-
-// ✅
-foo();
+foo(undefined); // ❌
+foo();          // ✅
 ```
 
 ## Options

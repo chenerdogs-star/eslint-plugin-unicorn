@@ -12,11 +12,8 @@ The [`removeEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/Eve
 ## Examples
 
 ```js
-// ❌
-window.removeEventListener('click', listener.bind(window));
-
-// ✅
-window.removeEventListener('click', listener);
+window.removeEventListener('click', listener.bind(window)); // ❌
+window.removeEventListener('click', listener);              // ✅
 ```
 
 ```js

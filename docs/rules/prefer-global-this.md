@@ -22,59 +22,38 @@ The complete list of permitted APIs can be found in the rule's [source code](../
 ## Examples
 
 ```js
-// ❌
-window;
-
-// ✅
-globalThis;
+window;     // ❌
+globalThis; // ✅
 ```
 
 ```js
-// ❌
-window.foo;
-
-// ✅
-globalThis.foo;
+window.foo;     // ❌
+globalThis.foo; // ✅
 ```
 
 ```js
-// ❌
-global;
-
-// ✅
-globalThis;
+global;     // ❌
+globalThis; // ✅
 ```
 
 ```js
-// ❌
-global.foo;
-
-// ✅
-globalThis.foo;
+global.foo;     // ❌
+globalThis.foo; // ✅
 ```
 
 ```js
-// ❌
-const {foo} = window;
-
-// ✅
-const {foo} = globalThis;
+const {foo} = window;     // ❌
+const {foo} = globalThis; // ✅
 ```
 
 ```js
-// ❌
-window.navigator;
-
-// ✅
-globalThis.navigator;
+window.navigator;     // ❌
+globalThis.navigator; // ✅
 ```
 
 ```js
-// ❌
-window.location;
-
-// ✅
-globalThis.location;
+window.location;     // ❌
+globalThis.location; // ✅
 ```
 
 ```js

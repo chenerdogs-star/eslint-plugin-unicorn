@@ -30,11 +30,8 @@ function foo(bar) {
 ```js
 import foo from './foo.js';
 
-// ❌
-if (typeof foo.bar !== 'undefined') {}
-
-// ✅
-if (foo.bar !== undefined) {}
+if (typeof foo.bar !== 'undefined') {} // ❌
+if (foo.bar !== undefined) {}          // ✅
 ```
 
 ## Options

@@ -20,59 +20,41 @@ Similar to the [`explicit-length-check`](explicit-length-check.md) rule.
 ```js
 const index = foo.indexOf('bar');
 
-// ❌
-if (index < 0) {}
-
-// ✅
-if (index === -1) {}
+if (index < 0) {}    // ❌
+if (index === -1) {} // ✅
 ```
 
 ```js
 const index = foo.indexOf('bar');
 
-// ❌
-if (index >= 0) {}
-
-// ✅
-if (index !== -1) {}
+if (index >= 0) {}   // ❌
+if (index !== -1) {} // ✅
 ```
 
 ```js
 const index = foo.indexOf('bar');
 
-// ❌
-if (index > -1) {}
-
-// ✅
-if (index !== -1) {}
+if (index > -1) {}   // ❌
+if (index !== -1) {} // ✅
 ```
 
 ```js
 const index = foo.lastIndexOf('bar');
 
-// ❌
-if (index >= 0) {}
-
-// ✅
-if (index !== -1) {}
+if (index >= 0) {}   // ❌
+if (index !== -1) {} // ✅
 ```
 
 ```js
 const index = array.findIndex(element => element > 10);
 
-// ❌
-if (index < 0) {}
-
-// ✅
-if (index === -1) {}
+if (index < 0) {}    // ❌
+if (index === -1) {} // ✅
 ```
 
 ```js
 const index = array.findLastIndex(element => element > 10);
 
-// ❌
-if (index < 0) {}
-
-// ✅
-if (index === -1) {}
+if (index < 0) {}    // ❌
+if (index === -1) {} // ✅
 ```
