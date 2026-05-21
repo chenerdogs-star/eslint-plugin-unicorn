@@ -100,21 +100,51 @@ const getIndexIdentifierName = forStatement => {
 		return;
 	}
 
-	if (variableDeclaration.declarations.length !== 1) {
-		return;
+	if (variableDeclaration.declarations.length === 1) {
+		const [variableDeclarator] = variableDeclaration.declarations;
+
+		if (!isLiteralZero(variableDeclarator.init)) {
+			return;
+		}
+
+		if (variableDeclarator.id.type !== 'Identifier') {
+			return;
+		}
+
+		return variableDeclarator.id.name;
 	}
 
-	const [variableDeclarator] = variableDeclaration.declarations;
+	if (variableDeclaration.declarations.length === 2) {
+		const [firstDeclarator, secondDeclarator] = variableDeclaration.declarations;
 
-	if (!isLiteralZero(variableDeclarator.init)) {
-		return;
+		if (!isLiteralZero(firstDeclarator.init)) {
+			return;
+		}
+
+		if (firstDeclarator.id.type !== 'Identifier') {
+			return;
+		}
+
+		// Second declaration must be: lengthVar = array.length
+		if (secondDeclarator.id.type !== 'Identifier') {
+			return;
+		}
+
+		const init = secondDeclarator.init;
+		if (
+			!init
+			|| init.type !== 'MemberExpression'
+			|| init.property.type !== 'Identifier'
+			|| init.property.name !== 'length'
+			|| init.object.type !== 'Identifier'
+		) {
+			return;
+		}
+
+		return firstDeclarator.id.name;
 	}
 
-	if (variableDeclarator.id.type !== 'Identifier') {
-		return;
-	}
-
-	return variableDeclarator.id.name;
+	return;
 };
 
 const getStrictComparisonOperands = binaryExpression => {
@@ -164,6 +194,60 @@ const getArrayIdentifierFromBinaryExpression = (binaryExpression, indexIdentifie
 	return greater.object;
 };
 
+const getArrayIdentifierFromCachedLength = (forStatement, indexIdentifierName) => {
+	const {init: variableDeclaration} = forStatement;
+
+	if (!variableDeclaration || variableDeclaration.type !== 'VariableDeclaration') {
+		return;
+	}
+
+	if (variableDeclaration.declarations.length !== 2) {
+		return;
+	}
+
+	const [firstDeclarator, secondDeclarator] = variableDeclaration.declarations;
+
+	if (!isIdentifierWithName(firstDeclarator.id, indexIdentifierName)) {
+		return;
+	}
+
+	if (secondDeclarator.id.type !== 'Identifier') {
+		return;
+	}
+
+	const init = secondDeclarator.init;
+	if (
+		!init
+		|| init.type !== 'MemberExpression'
+		|| init.property.type !== 'Identifier'
+		|| init.property.name !== 'length'
+		|| init.object.type !== 'Identifier'
+	) {
+		return;
+	}
+
+	const {test} = forStatement;
+	if (!test || test.type !== 'BinaryExpression') {
+		return;
+	}
+
+	const operands = getStrictComparisonOperands(test);
+	if (!operands) {
+		return;
+	}
+
+	const {lesser, greater} = operands;
+	if (!isIdentifierWithName(lesser, indexIdentifierName)) {
+		return;
+	}
+
+	if (!isIdentifierWithName(greater, secondDeclarator.id.name)) {
+		return;
+	}
+
+	return init.object;
+};
+
 const getArrayIdentifier = (forStatement, indexIdentifierName) => {
 	const {test} = forStatement;
 
@@ -171,7 +255,8 @@ const getArrayIdentifier = (forStatement, indexIdentifierName) => {
 		return;
 	}
 
-	return getArrayIdentifierFromBinaryExpression(test, indexIdentifierName);
+	return getArrayIdentifierFromBinaryExpression(test, indexIdentifierName)
+		|| getArrayIdentifierFromCachedLength(forStatement, indexIdentifierName);
 };
 
 const isLiteralOnePlusIdentifierWithName = (node, identifierName) => {

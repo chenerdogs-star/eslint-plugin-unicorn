@@ -724,6 +724,27 @@ test({
 				console.log(element);
 			}
 		`),
+
+		// Cached length pattern: for (let i = 0, j = arr.length; i < j; i += 1)
+		testCase(outdent`
+			for (let i = 0, j = arr.length; i < j; i += 1) {
+				console.log(arr[i]);
+			}
+		`, outdent`
+			for (const element of arr) {
+				console.log(element);
+			}
+		`),
+		testCase(outdent`
+			for (let i = 0, arrayLength = arr.length; i < arrayLength; i += 1) {
+				const el = arr[i];
+				console.log(i, el);
+			}
+		`, outdent`
+			for (const [i, el] of arr.entries()) {
+				console.log(i, el);
+			}
+		`),
 	],
 });
 
